@@ -1,3 +1,10 @@
+// Mostrar y ocultar el menú en pantallas pequeñas
+function toggleMenu() {
+    const menuItems = document.getElementById('menu-items');
+    menuItems.classList.toggle('active');
+}
+
+// Mostrar lista seleccionada
 function mostrarLista(listaId) {
     // Ocultar todas las listas
     const listas = document.querySelectorAll('.lista');

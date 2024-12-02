@@ -9,12 +9,32 @@ body {
 /* Estilo del menú */
 .menu {
     background-color: #333;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
+    color: white;
+    padding: 10px 20px;
 }
 
-.menu button {
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-items button {
     background-color: #444;
     color: white;
     border: none;
@@ -22,9 +42,10 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin: 5px;
 }
 
-.menu button:hover {
+.menu-items button:hover {
     background-color: #555;
 }
 
@@ -53,4 +74,21 @@ body {
 .lista ul {
     list-style-type: disc;
     margin: 10px 0 0 20px;
+}
+
+/* Responsividad: Menú desplegable */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Botón de hamburguesa visible */
+    }
+
+    .menu-items {
+        display: none; /* Oculto por defecto en móviles */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-items.active {
+        display: flex; /* Se muestra cuando está activo */
+    }
 }

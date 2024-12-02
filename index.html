@@ -3,55 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina con Menú y Listas</title>
+  <title>Página con Menú Responsivo</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Menú superior -->
+
 <nav class="menu">
-  <button onclick="mostrarLista('lista1')">Lista 1</button>
-  <button onclick="mostrarLista('lista2')">Lista 2</button>
-  <button onclick="mostrarLista('lista3')">Lista 3</button>
-  <button onclick="mostrarLista('lista4')">Lista 4</button>
-  <button onclick="mostrarLista('lista5')">Lista 5</button>
-  <button onclick="mostrarLista('lista6')">Lista 6</button>
-  <button onclick="mostrarLista('lista7')">Lista 7</button>
-  <button onclick="mostrarLista('lista8')">Lista 8</button>
-  <button onclick="mostrarLista('lista9')">Lista 9</button>
-  <button onclick="mostrarLista('lista10')">Lista 10</button>
-  <button onclick="mostrarLista('lista11')">Lista 11</button>
-  <button onclick="mostrarLista('lista12')">Lista 12</button>
-  <button onclick="mostrarLista('lista13')">Lista 13</button>
-  <button onclick="mostrarLista('lista14')">Lista 14</button>
-  <button onclick="mostrarLista('lista15')">Lista 15</button>
+  <div class="menu-header">
+    <h1>FOGONS🔥🥘</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="menu-items" id="menu-items">
+    <button onclick="mostrarLista('lista1')">Lista Martinazo</button>
+    <button onclick="mostrarLista('lista2')">Lista Gisbi</button>
+    <button onclick="mostrarLista('lista3')">Lista Isaac</button>
+    <button onclick="mostrarLista('lista4')">Lista Sola</button>
+    <button onclick="mostrarLista('lista5')">Lista Espi</button>
+    <button onclick="mostrarLista('lista6')">Lista David</button>
+    <button onclick="mostrarLista('lista7')">Lista Sabate</button>
+    <button onclick="mostrarLista('lista8')">Lista Faneka</button>
+    <button onclick="mostrarLista('lista9')">Lista Torot</button>
+    <button onclick="mostrarLista('lista10')">Lista Velasco</button>
+  </div>
 </nav>
 
 <!-- Contenedores de las listas -->
 <div class="contenedor-listas">
+  <!-- Lista Martinazo -->
   <div class="lista" id="lista1">
-    <h2>Lista 1</h2>
+    <h2>Lista Martinazo</h2>
     <ul>
-      <li>Elemento 1</li>
-      <li>Elemento 2</li>
-      <li>Elemento 3</li>
+      <li>Joana prades V1</li>
+      <li>Joana Prades V2 la vuelta</li>
+      <li>Laia Carles 8</li>
+      <li>Alba rascon 7</li>
+      <li>Camila 4</li>
+      <li>Noeta 2</li>
+      <li>Roser 8</li>
+      <li>Bruna 4</li>
+      <li>Julia bcn 13 top 1 i ha d'exuper mes bola</li>
+      <li>Aroa 7</li>
+      <li>Cinta 3</li>
+      <li>Laia santos 7</li>
+      <li>Meritxell 8</li>
+      <li>Martinalademartinazo 10</li>
+      <li>Nerea Piñol 9</li>
+      <li>itchi 2</li>
+      <li>Mar figuetes 8</li>
+      <li>Carla la de ferri(q la xifoteta es meua)8</li>
+      <li>Marc duch 11+1</li>
+      <li>Blanca tuset 2</li>
+      <li>Julia apolo 3</li>
+      <li>Paula mau 5</li>
+      <li>Ana "amigueta😝" de pepe 7</li>
     </ul>
   </div>
+
+  <!-- Lista Gisbi -->
   <div class="lista" id="lista2">
-    <h2>Lista 2</h2>
+    <h2>Lista Gisbi</h2>
     <ul>
-      <li>Elemento A</li>
-      <li>Elemento B</li>
-      <li>Elemento C</li>
+      <li>Jak l'esparrec</li>
+      <li>noetabonfill</li>
+      <li>sa cusina de vela7</li>
+      <li>sagri</li>
+      <li>moto claracorreus</li>
+      <li>ambulanciera</li>
+      <li>andrea</li>
+      <li>ariadna mola</li>
+      <li>coya</li>
+      <li>Laura</li>
+      <li>Paia de tik tok en 200k</li>
     </ul>
   </div>
-  <!-- Agrega más listas aquí con el mismo formato -->
-  <!-- ... -->
-  <div class="lista" id="lista15">
-    <h2>Lista 15</h2>
+
+  <!-- Lista Isaac -->
+  <div class="lista" id="lista3">
+    <h2>Lista Isaac</h2>
     <ul>
-      <li>Elemento X</li>
-      <li>Elemento Y</li>
-      <li>Elemento Z</li>
+      <li>mariconeti que parlava al renaixement</li>
+      <li>colega qe tagraden los calipos de llom</li>
+      <li>mare sola</li>
+    </ul>
+  </div>
+
+  <!-- Lista Sola -->
+  <div class="lista" id="lista4">
+    <h2>Lista Sola</h2>
+    <ul>
+      <li>clarafabregat</li>
+      <li>gabriela (cul)</li>
+      <li>albarascon</li>
+      <li>cinta herrero</li>
+      <li>nereapiñol</li>
+    </ul>
+  </div>
+
+  <!-- Lista Espi -->
+  <div class="lista" id="lista5">
+    <h2>Lista Espi</h2>
+    <ul>
+      <li>Amigues de eba</li>
+      <li>Velassof</li>
+      <li>Dovlea</li>
+      <li>Maria peris</li>
+      <li>anna mengual</li>
+      <li>mare de sola</li>
+      <li>sapeta</li>
+      <li>la minudeta de ferri i martinazo</li>
+      <li>claracorreus</li>
+      <li>Elsa (la gorda)</li>
+      <li>CARLA de velasco ferri martinazo i mija colla mes</li>
+    </ul>
+  </div>
+
+  <!-- Lista David -->
+  <div class="lista" id="lista6">
+    <h2>Lista David</h2>
+    <ul>
+      <li>esta tia vol mandanga (sacusina de Vela7)</li>
+      <li>Lo puto Janfeka</li>
+      <li>Ruth08</li>
+      <li>anna tomas</li>
+      <li>joana montserrat</li>
+      <li>random del macdonals</li>
+      <li>Gabriela</li>
+      <li>Maria faneca</li>
+      <li>lauragym</li>
+    </ul>
+  </div>
+
+  <!-- Lista Sabate -->
+  <div class="lista" id="lista7">
+    <h2>Lista Sabate</h2>
+    <ul>
+      <li>arisubi</li>
+      <li>xesca</li>
+      <li>cinta(sate)</li>
+      <li>angela</li>
+      <li>sonia mare espinos</li>
+      <li>nuria noviq ferdi (estan a la cafeteria)</li>
+    </ul>
+  </div>
+
+  <!-- Lista Faneka -->
+  <div class="lista" id="lista8">
+    <h2>Lista Faneka</h2>
+    <ul>
+      <li>ami m'agraden totes</li>
+      <li>Joana Montserrat</li>
+      <li>roser la de martinaza</li>
+      <li>maria(bizum 30,viatge rapita,mamada cumple faneca)</li>
+      <li>maria campus</li>
+      <li>maria psicopata</li>
+      <li>alina la del portal</li>
+      <li>noa(exbadre) 🔥🍳</li>
+      <li>panxita festasa</li>
+      <li>noeta</li>
+      <li>nerea(vam naixer junts practicament)</li>
+      <li>3 maries les coneixo io</li>
+      <li>Irune(ex)</li>
+    </ul>
+  </div>
+
+  <!-- Lista Torot -->
+  <div class="lista" id="lista9">
+    <h2>Lista Torot</h2>
+    <ul>
+      <li>claracorreus</li>
+      <li>laiaxupoptera</li>
+      <li>noa "la noeta"</li>
+    </ul>
+  </div>
+
+  <!-- Lista Velasco -->
+  <div class="lista" id="lista10">
+    <h2>Lista Velasco</h2>
+    <ul>
+      <li>Mora</li>
+      <li>cul de clara</li>
+      <li>julia mateu</li>
+      <li>clara correus (que caxondo m'ha posat → a sate)</li>
+      <li>una tal angela</li>
+      <li>ambulanciera de gisbi</li>
+      <li>ana montero amiga pepe</li>
+      <li>Naiala basket (berro)</li>
+      <li>carla ferri martinazo barbera</li>
+      <li>Belen(manus)</li>
     </ul>
   </div>
 </div>
