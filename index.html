@@ -3,35 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página con Menú Responsivo</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Menú Desplegable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #212121;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .button {
+      width: 100%;
+      background-color: #d36e54;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: #c0563c;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .list {
+      background-color: #444;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .list ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list li {
+      padding: 5px 0;
+      border-bottom: 1px solid #555;
+    }
+
+    .list li:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
+<div class="container">
+  <div class="title">LLEPOLS</div>
 
-<nav class="menu">
-  <div class="menu-header">
-    <h1>FOGONS🔥🥘</h1>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  </div>
-  <div class="menu-items" id="menu-items">
-    <button onclick="mostrarLista('lista1')">Lista Martinazo</button>
-    <button onclick="mostrarLista('lista2')">Lista Gisbi</button>
-    <button onclick="mostrarLista('lista3')">Lista Isaac</button>
-    <button onclick="mostrarLista('lista4')">Lista Sola</button>
-    <button onclick="mostrarLista('lista5')">Lista Espi</button>
-    <button onclick="mostrarLista('lista6')">Lista David</button>
-    <button onclick="mostrarLista('lista7')">Lista Sabate</button>
-    <button onclick="mostrarLista('lista8')">Lista Faneka</button>
-    <button onclick="mostrarLista('lista9')">Lista Torot</button>
-    <button onclick="mostrarLista('lista10')">Lista Velasco</button>
-  </div>
-</nav>
-
-<!-- Contenedores de las listas -->
-<div class="contenedor-listas">
-  <!-- Lista Martinazo -->
-  <div class="lista" id="lista1">
-    <h2>Lista Martinazo</h2>
+  <button class="button" onclick="toggleList('list1')">
+    LLISTA MARTINAZO
+    <span class="arrow" id="arrow-list1">&#9654;</span>
+  </button>
+  <div class="list" id="list1">
     <ul>
       <li>Joana prades V1</li>
       <li>Joana Prades V2 la vuelta</li>
@@ -59,37 +120,30 @@
     </ul>
   </div>
 
-  <!-- Lista Gisbi -->
-  <div class="lista" id="lista2">
-    <h2>Lista Gisbi</h2>
+  <button class="button" onclick="toggleList('list2')">
+    LLISTA VELA
+    <span class="arrow" id="arrow-list2">&#9654;</span>
+  </button>
+  <div class="list" id="list2">
     <ul>
-      <li>Jak l'esparrec</li>
-      <li>noetabonfill</li>
-      <li>sa cusina de vela7</li>
-      <li>sagri</li>
-      <li>moto claracorreus</li>
-      <li>ambulanciera</li>
-      <li>andrea</li>
-      <li>ariadna mola</li>
-      <li>coya</li>
-      <li>Laura</li>
-      <li>Paia de tik tok en 200k</li>
+      <li>Mora</li>
+      <li>cul de clara</li>
+      <li>julia mateu</li>
+      <li>clara correus (que caxondo m'ha posat → a sate)</li>
+      <li>una tal angela</li>
+      <li>ambulanciera de gisbi</li>
+      <li>ana montero amiga pepe</li>
+      <li>Naiala basket (berro)</li>
+      <li>carla ferri martinazo barbera</li>
+      <li>Belen(manus)</li>
     </ul>
   </div>
 
-  <!-- Lista Isaac -->
-  <div class="lista" id="lista3">
-    <h2>Lista Isaac</h2>
-    <ul>
-      <li>mariconeti que parlava al renaixement</li>
-      <li>colega qe tagraden los calipos de llom</li>
-      <li>mare sola</li>
-    </ul>
-  </div>
-
-  <!-- Lista Sola -->
-  <div class="lista" id="lista4">
-    <h2>Lista Sola</h2>
+  <button class="button" onclick="toggleList('list3')">
+    LLISTA SOLA
+    <span class="arrow" id="arrow-list3">&#9654;</span>
+  </button>
+  <div class="list" id="list3">
     <ul>
       <li>clarafabregat</li>
       <li>gabriela (cul)</li>
@@ -99,9 +153,23 @@
     </ul>
   </div>
 
-  <!-- Lista Espi -->
-  <div class="lista" id="lista5">
-    <h2>Lista Espi</h2>
+  <button class="button" onclick="toggleList('list4')">
+    LLISTA TOROT
+    <span class="arrow" id="arrow-list4">&#9654;</span>
+  </button>
+  <div class="list" id="list4">
+    <ul>
+      <li>claracorreus</li>
+      <li>laiaxupoptera</li>
+      <li>noa "la noeta"</li>
+    </ul>
+  </div>
+
+  <button class="button" onclick="toggleList('list5')">
+    LLISTA ESPI
+    <span class="arrow" id="arrow-list5">&#9654;</span>
+  </button>
+  <div class="list" id="list5">
     <ul>
       <li>Amigues de eba</li>
       <li>Velassof</li>
@@ -117,38 +185,11 @@
     </ul>
   </div>
 
-  <!-- Lista David -->
-  <div class="lista" id="lista6">
-    <h2>Lista David</h2>
-    <ul>
-      <li>esta tia vol mandanga (sacusina de Vela7)</li>
-      <li>Lo puto Janfeka</li>
-      <li>Ruth08</li>
-      <li>anna tomas</li>
-      <li>joana montserrat</li>
-      <li>random del macdonals</li>
-      <li>Gabriela</li>
-      <li>Maria faneca</li>
-      <li>lauragym</li>
-    </ul>
-  </div>
-
-  <!-- Lista Sabate -->
-  <div class="lista" id="lista7">
-    <h2>Lista Sabate</h2>
-    <ul>
-      <li>arisubi</li>
-      <li>xesca</li>
-      <li>cinta(sate)</li>
-      <li>angela</li>
-      <li>sonia mare espinos</li>
-      <li>nuria noviq ferdi (estan a la cafeteria)</li>
-    </ul>
-  </div>
-
-  <!-- Lista Faneka -->
-  <div class="lista" id="lista8">
-    <h2>Lista Faneka</h2>
+  <button class="button" onclick="toggleList('list6')">
+    LLISTA FANECA
+    <span class="arrow" id="arrow-list6">&#9654;</span>
+  </button>
+  <div class="list" id="list6">
     <ul>
       <li>ami m'agraden totes</li>
       <li>Joana Montserrat</li>
@@ -166,34 +207,86 @@
     </ul>
   </div>
 
-  <!-- Lista Torot -->
-  <div class="lista" id="lista9">
-    <h2>Lista Torot</h2>
+  <button class="button" onclick="toggleList('list7')">
+    LLISTA SABATE
+    <span class="arrow" id="arrow-list7">&#9654;</span>
+  </button>
+  <div class="list" id="list7">
     <ul>
-      <li>claracorreus</li>
-      <li>laiaxupoptera</li>
-      <li>noa "la noeta"</li>
+      <li>arisubi</li>
+      <li>xesca</li>
+      <li>cinta(sate)</li>
+      <li>angela</li>
+      <li>sonia mare espinos</li>
+      <li>nuria noviq ferdi (estan a la cafeteria)</li>
     </ul>
   </div>
 
-  <!-- Lista Velasco -->
-  <div class="lista" id="lista10">
-    <h2>Lista Velasco</h2>
+  <button class="button" onclick="toggleList('list8')">
+    LLISTA DAVID
+    <span class="arrow" id="arrow-list8">&#9654;</span>
+  </button>
+  <div class="list" id="list8">
     <ul>
-      <li>Mora</li>
-      <li>cul de clara</li>
-      <li>julia mateu</li>
-      <li>clara correus (que caxondo m'ha posat → a sate)</li>
-      <li>una tal angela</li>
-      <li>ambulanciera de gisbi</li>
-      <li>ana montero amiga pepe</li>
-      <li>Naiala basket (berro)</li>
-      <li>carla ferri martinazo barbera</li>
-      <li>Belen(manus)</li>
+      <li>esta tia vol mandanga (sacusina de Vela7)</li>
+      <li>Lo puto Janfeka</li>
+      <li>Ruth08</li>
+      <li>anna tomas</li>
+      <li>joana montserrat</li>
+      <li>random del macdonals</li>
+      <li>Gabriela</li>
+      <li>Maria faneca</li>
+      <li>lauragym</li>
     </ul>
   </div>
+
+  <button class="button" onclick="toggleList('list9')">
+    LLISTA GISBI
+    <span class="arrow" id="arrow-list9">&#9654;</span>
+  </button>
+  <div class="list" id="list9">
+    <ul>
+      <li>Jak l'esparrec</li>
+      <li>noetabonfill</li>
+      <li>sa cusina de vela7</li>
+      <li>sagri</li>
+      <li>moto claracorreus</li>
+      <li>ambulanciera</li>
+      <li>andrea</li>
+      <li>ariadna mola</li>
+      <li>coya</li>
+      <li>Laura</li>
+      <li>Paia de tik tok en 200k</li>
+    </ul>
+  </div>
+
+  <button class="button" onclick="toggleList('list10')">
+    LLISTA ISAAC
+    <span class="arrow" id="arrow-list10">&#9654;</span>
+  </button>
+  <div class="list" id="list10">
+    <ul>
+      <li>mariconeti que parlava al renaixement</li>
+      <li>colega qe tagraden los calipos de llom</li>
+      <li>mare sola</li>
+    </ul>
+  </div>
+
 </div>
 
-<script src="js/script.js"></script>
+<script>
+  function toggleList(listId) {
+    const list = document.getElementById(listId);
+    const arrow = document.getElementById(`arrow-${listId}`);
+
+    if (list.style.display === 'block') {
+      list.style.display = 'none';
+      arrow.classList.remove('rotate');
+    } else {
+      list.style.display = 'block';
+      arrow.classList.add('rotate');
+    }
+  }
+</script>
 </body>
 </html>

@@ -1,94 +1,26 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
 }
 
-/* Estilo del menú */
-.menu {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-}
-
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: none; /* Oculto por defecto */
-}
-
-.menu-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.menu-items button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin: 5px;
-}
-
-.menu-items button:hover {
-    background-color: #555;
-}
-
-/* Estilo de los contenedores de listas */
-.contenedor-listas {
-    margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.lista {
-    display: none;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .lista h2 {
-    margin-top: 0;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 .lista ul {
-    list-style-type: disc;
-    margin: 10px 0 0 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Responsividad: Menú desplegable */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Botón de hamburguesa visible */
-    }
-
-    .menu-items {
-        display: none; /* Oculto por defecto en móviles */
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-items.active {
-        display: flex; /* Se muestra cuando está activo */
-    }
+.lista ul li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
