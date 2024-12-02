@@ -3,12 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Pagina con Menú y Listas</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>¡Hola, Mundo!</h1>
-<p>LLISTA DE LLEPOLS:</p>
-<script src="/js/script.js"></script>
+<!-- Menú superior -->
+<nav class="menu">
+  <button onclick="mostrarLista('lista1')">Lista 1</button>
+  <button onclick="mostrarLista('lista2')">Lista 2</button>
+  <button onclick="mostrarLista('lista3')">Lista 3</button>
+  <button onclick="mostrarLista('lista4')">Lista 4</button>
+  <button onclick="mostrarLista('lista5')">Lista 5</button>
+  <button onclick="mostrarLista('lista6')">Lista 6</button>
+  <button onclick="mostrarLista('lista7')">Lista 7</button>
+  <button onclick="mostrarLista('lista8')">Lista 8</button>
+  <button onclick="mostrarLista('lista9')">Lista 9</button>
+  <button onclick="mostrarLista('lista10')">Lista 10</button>
+  <button onclick="mostrarLista('lista11')">Lista 11</button>
+  <button onclick="mostrarLista('lista12')">Lista 12</button>
+  <button onclick="mostrarLista('lista13')">Lista 13</button>
+  <button onclick="mostrarLista('lista14')">Lista 14</button>
+  <button onclick="mostrarLista('lista15')">Lista 15</button>
+</nav>
+
+<!-- Contenedores de las listas -->
+<div class="contenedor-listas">
+  <div class="lista" id="lista1">
+    <h2>Lista 1</h2>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+  </div>
+  <div class="lista" id="lista2">
+    <h2>Lista 2</h2>
+    <ul>
+      <li>Elemento A</li>
+      <li>Elemento B</li>
+      <li>Elemento C</li>
+    </ul>
+  </div>
+  <!-- Agrega más listas aquí con el mismo formato -->
+  <!-- ... -->
+  <div class="lista" id="lista15">
+    <h2>Lista 15</h2>
+    <ul>
+      <li>Elemento X</li>
+      <li>Elemento Y</li>
+      <li>Elemento Z</li>
+    </ul>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

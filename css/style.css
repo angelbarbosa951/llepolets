@@ -1,11 +1,56 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f3f3f3;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
-h1 {
-    color: #333;
+/* Estilo del menú */
+.menu {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.menu button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #555;
+}
+
+/* Estilo de los contenedores de listas */
+.contenedor-listas {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lista {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.lista h2 {
+    margin-top: 0;
+}
+
+.lista ul {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
 }
